@@ -1,0 +1,119 @@
+body {
+    background-color: #f0f8ff;
+    color: #002366;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s;
+}
+
+.navbar {
+    background-color: #01376d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 50px; 
+    color: white;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.navbar h1 {
+    margin: 0;
+}
+
+.navbar-brand, .navbar-nav .nav-link, .navbar-text {
+    color: #ffffff !important;
+}
+
+.btn-primary, .btn-success, .btn-danger, .btn-info {
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004494;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1a6930;
+}
+
+.btn-danger:hover {
+    background-color: #cc0000;
+    border-color: #a30000;
+}
+
+.btn-info:hover {
+    background-color: #117a8b;
+    border-color: #0d5c70;
+}
+
+.table thead th {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #e1ecf4;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #d1e5f2;
+    transition: background-color 0.3s;
+}
+
+input[type="file"].btn-info {
+    background-color: #00116f;
+    border-color: #117a8b;
+}
+
+.btn-primary i, .btn-danger i {
+    margin-right: 4px;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #007bff;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #0056b3;
+}
+
+.table {
+    border-radius: 5px;
+    overflow: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mb-4 {
+    margin-bottom: 20px;
+}
+
+.btn {
+    border-radius: 5px;
+}
+.custom-form-margin {
+    margin-top: 80px; 
+}
+#downloadTemplateBtn{
+    margin-top: 20px
+}
+#uploadFileBtn {
+    margin-top: 20px;
+}

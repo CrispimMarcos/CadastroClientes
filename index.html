@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="container mt-5">
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand">Cadastro de Clientes</a>
+        <a class="btn btn-link" href="login.html">Sair</a>
+        <span id="usernameDisplay" class="navbar-text ml-auto"></span>
+    </nav>
+    <form id="clienteForm" class="custom-form-margin mb-4">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="nome">Nome completo:</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="cpf">CPF:</label>
+                <input type="text" class="form-control" id="cpf" name="cpf" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="dataNascimento">Data de Nascimento:</label>
+                <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" required>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="telefone">Telefone:</label>
+                <input type="text" class="form-control" id="telefone" name="telefone" required>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="celular">Celular:</label>
+                <input type="text" class="form-control" id="celular" name="celular" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="cep">CEP:</label>
+                <input type="text" class="form-control" id="cep" name="cep" required onblur="buscarEndereco()">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="logradouro">Rua:</label>
+                <input type="text" class="form-control" id="logradouro" name="logradouro" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="bairro">Bairro:</label>
+                <input type="text" class="form-control" id="bairro" name="bairro" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="cidade">Cidade:</label>
+                <input type="text" class="form-control" id="cidade" name="cidade" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="estado">Estado:</label>
+                <input type="text" class="form-control" id="estado" name="estado" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="pais">País:</label>
+                <input type="text" class="form-control" id="pais" name="pais" required>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+    </form>
+    <h2 class="text-center">Lista de Clientes e Endereços</h2>
+    <table id="clientesTable" class="table table-striped table-bordered table-hover table-responsive">
+        <thead class="thead-dark">
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Data de Nascimento</th>
+                <th>Telefone</th>
+                <th>Celular</th>
+                <th>CEP</th>
+                <th>Rua</th>
+                <th>Bairro</th>
+                <th>Cidade</th>
+                <th>Estado</th>
+                <th>País</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div class="mb-4">
+        <button id="exportBtn" class="btn btn-link"><i class="fas fa-download"></i> Exportar Banco de Dados</button>
+        <input type="file" id="importInput" class="btn btn-link">
+        <button id="importBtn" class="btn btn-link"><i class="fas fa-upload"></i> Carregar Banco de Dados</button>
+        <button id="downloadTemplateBtn"class="btn btn-primary">Baixar Modelo de Arquivo</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alasql@latest"></script>
+    <script src="db_init.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
