@@ -17,7 +17,7 @@ $(document).ready(function() {
                 alert('Login bem-sucedido!');
                 window.location.href = 'index.html';
             } else {
-                alert('Usuário ou senha incorretos!');
+                alert('Usuário ou senha incorretos! Clique em registrar caso não tenha um registro!');
             }
         } else {
             alert('Por favor, preencha todos os campos.');
